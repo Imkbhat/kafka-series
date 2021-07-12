@@ -1,0 +1,9 @@
+1. Download Apache kafka
+2. Make sure you are inside the bin/windows directory.
+3. Start up the Zookeeper -> zookeeper-server-start.bat ..\..\config\zookeeper.properties
+4. Start up the Kafka Broker. -> kafka-server-start.bat ..\..\config\server.properties
+5. create a topic -> kafka-topics.bat --create --topic Kafka-Example -zookeeper localhost:2181 --replication-factor 1 --partitions 1
+6. Start Spring boot app and observe in console
+7. Start console producer : kafka-console-producer.bat --broker-list localhost:9092 --topic Kafka-Example
+8. enter > in cmd : {"name":"Kiran","dept":"Tech","salary":2000}
+9. observe in eclipse console, consumer receives the message.
